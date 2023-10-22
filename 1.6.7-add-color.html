@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		   html,body{
+		        display:flex;
+		        flex-direction: column;
+		        height:100%;
+		    }
+		    div{
+		        flex:1;
+		        text-align: center;
+		    }
+		</style>
+	</head>
+
+	<body>
+		<div>
+		    <button id="click">Click Me to Add a Color!</button>
+		</div>
+		<script>
+		    //Write your code here! 
+            //create func addColor. it should prompt user to enter color
+		    //and appends a div w/ that background color to doc.body
+		    //addColor should excute when button is clicked.
+		    //don't worry about styling in the head element
+            
+            const button = document.getElementById("click");
+            button.addEventListener("click", addColor);
+
+            function addColor(){
+                const color = prompt("Add color");
+                const div = document.createElement("div");
+                div.setAttribute("style", "background-color:" + color);
+                document.body.appendChild(div);
+            }
+		</script>
+	</body>
+</html>
